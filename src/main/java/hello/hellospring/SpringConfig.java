@@ -14,6 +14,10 @@ public class SpringConfig {
 
     private DataSource dataSource;
 
+    public SpringConfig(DataSource dataSource) {
+        this.dataSource = dataSource;
+    }
+
     @Bean
     public MemberService memberService() {
         return new MemberService(memberRepository());
